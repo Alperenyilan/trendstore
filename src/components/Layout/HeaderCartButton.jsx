@@ -1,5 +1,6 @@
 import CartIcon from "../Cart/CartIcon";
 import "./HeaderCartButton.css";
+
 const HeaderCartButton = () => {
   return (
     <button className='button'>

@@ -1,6 +1,16 @@
 import "./Cart.css";
+import CartItem from "./CartItem";
+import products from "../../productData";
 
 const Cart = () => {
+  const cartItems = (
+    <ul className='cart-items'>
+      {products.map((product) => (
+        <CartItem key={product.id} product={product} />
+      ))}
+    </ul>
+  );
+
   return (
     <div className='offcanvas'>
       <div className='content'>
@@ -8,7 +18,7 @@ const Cart = () => {
           <h2>sepetim</h2>
           <a href='/'>X</a>
         </div>
-        cartItems
+        {cartItems}
         <div className='total'>
           <span>Toplam Değer</span>
           <span>10TL</span>

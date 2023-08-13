@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import "./Cart.css";
 import CartItem from "./CartItem";
 import products from "../../productData";
 
-const Cart = () => {
+const Cart = (props) => {
   const cartItems = (
     <ul className='cart-items'>
       {products.map((product) => (
@@ -16,7 +17,9 @@ const Cart = () => {
       <div className='content'>
         <div className='cart-head'>
           <h2>sepetim</h2>
-          <a href='/'>X</a>
+          <a href='/' className='cart-close' onClick={props.onClose}>
+            X{" "}
+          </a>
         </div>
         {cartItems}
         <div className='total'>

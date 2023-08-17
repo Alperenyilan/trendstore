@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Proje Özeti ve Yazdığım kodlar hakkında:
+Bu projede ilk önce hero.jsx adında bir component oluşturdum. İlk başta h span ve a etiketiyle ve de background için img etiketi oluşturup genel sayfa düzenine responsive şekilde oturttum.Daha sonrasaında Header componenti oluşturarak Trend Mağaza yazısını ekledim. Sağ tarafta bulunan button bölümünü ayrı bir component ile çağırdım headercartbutton.jsx adında. Buttona tıkladıgında sağ tarafta ürünler açılması için onShowCart adında bir prop geçirdim. CartIcon adında bir component oluşturup bunun içinde cart iconu için bir svg dosyası tuttum ve bunu export edip HeaderCartButton.jsx içinde çağırdım. Kendi oluşturduğum Dataları export edip oluşturduğum Products.jsx içinde çağırdım. Bunun içinde map fonksiyonu ile döngüye alarak ve de bir product adında bir parametre geçirdim. PRoductItem adında oluşturudgum component içinde bütün dışardan aldığım veriyi array olarak çağırdım. Bunları Card.jsx adında oluşturdugum componentin içinde tuttum.Card componentini props children metoduyla diper componente geçirdim. Rating yani derecelendirme görüntülerini oluşturdugum Rating componenti içinde oluşturdum ve bunu export edip ProductItem içine importladım(Kod karmaşıklığı ve çok fazla kod gözükmemesi için bu işlemleri uyguladım daha temiz gözükmesi ve optimizasyon için). En sonunda ise tıklandığında açılan sepetin kapatılıp açılma işlemleri için Cart.jsx adında component oluşturdum. App.jsx içinde oluşturdugum state managament işlemleri ile ilk değeri false döndürerek burada oluşturduğum bütün işlemleri Cartın içine props ile geçirdim. Daha sonrasında ise context kullanarak props metodlarını daha düzenli hale getireceğim.

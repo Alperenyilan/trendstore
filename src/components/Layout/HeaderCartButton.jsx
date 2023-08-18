@@ -6,7 +6,9 @@ import { CartContext } from "../../context/CartProvider";
 
 const HeaderCartButton = ({ onShowCart }) => {
   const cartCtx = useContext(CartContext);
-  const totalItemsInCart = cartCtx.items.length;
+  const totalItemsInCart = cartCtx.items.reduce((accumulator, currentItem) => {
+    return accumulator + currentItem.amount;
+  }, 0);
   return (
     <button className='button' onClick={onShowCart}>
       <span className='icon'>

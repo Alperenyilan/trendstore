@@ -6,13 +6,14 @@ import { CartContext } from "../../context/CartProvider";
 
 const HeaderCartButton = ({ onShowCart }) => {
   const cartCtx = useContext(CartContext);
+  const totalItemsInCart = cartCtx.items.length;
   return (
     <button className='button' onClick={onShowCart}>
       <span className='icon'>
         <CartIcon />
       </span>
       <span>Sepetim</span>
-      <span className='badge'>0</span>
+      <span className='badge'>{totalItemsInCart}</span>
     </button>
   );
 };

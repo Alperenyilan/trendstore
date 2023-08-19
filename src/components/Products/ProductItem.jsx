@@ -7,7 +7,8 @@ import { CartContext } from "../../context/CartProvider";
 const ProductItem = ({ product }) => {
   // eslint-disable-next-line react/prop-types
   const { name, description, img, price } = product;
-  const { addItem } = useContext(CartContext);
+  const { items, addItem, totalAmount } = useContext(CartContext);
+  console.log(items, totalAmount);
   return (
     <Card>
       <img src={img} alt={name} />
